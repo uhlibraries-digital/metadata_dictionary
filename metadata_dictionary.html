@@ -1,12 +1,13 @@
+@@ -0,0 +1,1177 @@
 <table border="1" cellspacing="0" cellpadding="10">
 <tbody>
 <tr>
 <td width="920"><a name="Top"></a>
 <h4>Descriptive Metadata</h4>
-<p><a href="#Title">Title</a> | <a href="#AlternativeTitle">Alternative Title</a> | <a href="#Creator">Creator</a> | <a href="#Contributor">Contributor</a> | <a href="#Publisher">Publisher</a> | <a href="#PlaceOfCreation">Place of Creation</a> | <a href="#DateISO">Date (ISO 8601)</a> | <a href="#Date">Date</a> | <a href="#Description">Description</a> | <a href="#Caption">Caption</a> | <a href="#Inscription">Inscription</a> | <a href="#Donor">Donor</a> | <a href="#SubjectTopical">Subject.Topical</a> | <a href="#SubjectName">Subject.Name</a> | <a href="#SubjectTimePeriod">Subject.Time Period</a> | <a href="#SubjectGeographic">Subject.Geographic</a> | <a href="#GeographicCoordinates">Geographic Coordinates</a> | <a href="#Genre">Genre</a> | <a href="#Language">Language</a> | <a href="#LanguageCode">Language Code (ISO 639.2)</a> | <a href="#PhysicalDescription">Physical Description</a> | <a href="#Type">Type (DCMI)</a> | <a href="#Format">Format (IMT)</a> | <a href="#OriginalItemExtent">Original Item Extent</a></p>
+<p><a href="#Title">Title</a> | <a href="#AlternativeTitle">Alternative Title</a> | <a href="#Creator">Creator</a> | <a href="#Contributor">Contributor</a> | <a href="#Publisher">Publisher</a> | <a href="#PlaceOfCreation">Place of Creation</a> | <a href="#DateISO">Date (ISO 8601)</a> | <a href="#Date">Date</a> | <a href="#Description">Description</a> | <a href="#Caption">Caption</a> | <a href="#Inscription">Inscription</a> | <a href="#Donor">Donor</a> | <a href="#SubjectTopical">Subject.Topical</a> | <a hre...(line truncated)...
 <hr />
 <h4>Administrative Metadata</h4>
-<p><a href="#OriginalItemLocation">Original Item Location</a> | <a href="#OriginalItemURL">Original Item URL</a> | <a href="#OriginalCollection">Original Collection</a> | <a href="#OriginalCollectionURL">Original Collection URL</a> | <a href="#DigitalCollection">Digital Collection</a> | <a href="#DigitalCollectionURL">Digital Collection URL</a> | <a href="#Repository">Repository</a> | <a href="#RepositoryURL">Repository URL</a> | <a href="#UseAndReproduction">Use and Reproduction</a> | <a href="#Transcript">Transcript</a></p>
+<p><a href="#OriginalItemLocation">Original Item Location</a> | <a href="#OriginalItemURL">Original Item URL</a> | <a href="#OriginalCollection">Original Collection</a> | <a href="#OriginalCollectionURL">Original Collection URL</a> | <a href="#DigitalCollection">Digital Collection</a> | <a href="#DigitalCollectionURL">Digital Collection URL</a> | <a href="#Repository">Repository</a> | <a href="#RepositoryURL">Repository URL</a> | <a href="#UseAndReproduction">Use and Reproduction</a> | <a href="#Transcript"...(line truncated)...
 </td>
 </tr>
 </tbody>
@@ -92,7 +93,7 @@
 <p>Alternative title from the catalog record. Separate multiple entries with a semicolon followed by a space.</p>
 <hr />
 <p style="text-align: center;"><em>EXAMPLE</em></p>
-<p>"Americae pars quarta, sive, Insignis &amp; admiranda historia de reperta prim&ugrave;m Occidentalis India &agrave; Christophoro Columbo anno M. CCCCXCII / scripta ab Hieronymo Bezono... qui istic an[n]is XIIII. versatus dilige[n]ter omnia observavit ; addita ad singula fer&egrave; capita, non contemnenda scholia in quibus agitur de earum etiam gentium idolatria ; accessit praeterea illarum regionum tabula chorographica ; omnia elegantibus figuris in aes incisis expressa &agrave; Theodoro de Bry Leodiense, cive Francofortensi."</p>
+<p>"Americae pars quarta, sive, Insignis &amp; admiranda historia de reperta prim&ugrave;m Occidentalis India &agrave; Christophoro Columbo anno M. CCCCXCII / scripta ab Hieronymo Bezono... qui istic an[n]is XIIII. versatus dilige[n]ter omnia observavit ; addita ad singula fer&egrave; capita, non contemnenda scholia in quibus agitur de earum etiam gentium idolatria ; accessit praeterea illarum regionum tabula chorographica ; omnia elegantibus figuris in aes incisis expressa &agrave; Theodoro de Bry Leodiens...(line truncated)...
 </td>
 <td valign="top">
 <p><em>DC Map:</em> Title-Alternative<br /><em>Data Type:</em> Text<br /><em>Search:</em> Yes<br /><em>Hide:</em> No<br /><em>Required:</em> No<br /><em>Vocab:</em> No</p>
@@ -121,10 +122,9 @@
 <ol>
 <li><a href="http://id.loc.gov/authorities/names.html" target="_blank">Library of Congress Name Authorities (LCNAF)</a></li>
 <li><a href="http://www.tshaonline.org/handbook/online" target="_blank">Handbook of Texas (HOT)</a></li>
-<li><a href="http://www.getty.edu/research/tools/vocabularies/ulan/index.html" target="_blank">Getty Union List of Artist Names (ULAN)</a></li>
-<li>&nbsp;&nbsp;Local</li>
+<li>Local</li>
 </ol>
-<p><strong>Local:</strong> [Last Name], [First Name], [Middle Initial]<br />(if needed) [year of birth]-[year of death]</p>
+<p><strong>Local:</strong> [Last Name], [First Name], [Middle Initial]<br />(if applicable) [Suffix], (if needed) [year of birth]-[year of death]</p>
 <p>Separate multiple entries with a semicolon followed by a space.</p>
 <hr />
 <p style="text-align: center;"><em>EXAMPLES</em></p>
@@ -132,6 +132,7 @@
 <li>Doe, Jane A.</li>
 <li>Doe, J. A. (Jane Apple)</li>
 <li>Doe, Jane A., 1882-1982</li>
+<li>Doe, John, Jr.</li>
 </ul>
 </td>
 <td valign="top">
@@ -139,7 +140,7 @@
 <p><em>Required in UHDL Field Template:</em> Yes</p>
 </td>
 <td valign="top">
-<p><strong>DC:</strong> <a href="http://purl.org/dc/elements/1.1/creator" target="_blank">Creator</a><br /><strong>MARC:</strong><br /><a href="http://www.loc.gov/marc/bibliographic/concise/bd100.html" target="_blank">100 1#</a><br /><a href="http://www.loc.gov/marc/bibliographic/concise/bd110.html" target="_blank">110 2#</a><br /><a href="http://www.loc.gov/marc/bibliographic/concise/bd111.html" target="_blank">111 1#</a><br /><a title="700" href="http://www.loc.gov/marc/bibliographic/concise/bd700.html" target="_blank">700</a><br /><a href="http://www.loc.gov/marc/bibliographic/concise/bd710.html" target="_blank">710</a><br /><a href="http://www.loc.gov/marc/bibliographic/concise/bd711.html" target="_blank">711</a></p>
+<p><strong>DC:</strong> <a href="http://purl.org/dc/elements/1.1/creator" target="_blank">Creator</a><br /><strong>MARC:</strong><br /><a href="http://www.loc.gov/marc/bibliographic/concise/bd100.html" target="_blank">100 1#</a><br /><a href="http://www.loc.gov/marc/bibliographic/concise/bd110.html" target="_blank">110 2#</a><br /><a href="http://www.loc.gov/marc/bibliographic/concise/bd111.html" target="_blank">111 1#</a><br /><a title="700" href="http://www.loc.gov/marc/bibliographic/concise/bd700.html" t...(line truncated)...
 </td>
 </tr>
 <tr style="background-color: #f1f1f1;">
@@ -162,10 +163,9 @@
 <ol>
 <li><a href="http://id.loc.gov/authorities/names.html" target="_blank">Library of Congress Name Authorities (LCNAF)</a></li>
 <li><a href="http://www.tshaonline.org/handbook/online" target="_blank">Handbook of Texas (HOT)</a></li>
-<li><a href="http://www.getty.edu/research/tools/vocabularies/ulan/index.html" target="_blank">Getty Union List of Artist Names (ULAN)</a></li>
-<li>&nbsp;&nbsp;Local</li>
+<li>Local</li>
 </ol>
-<p><strong>Local:</strong> [Last Name], [First Name], [Middle Initial]<br />(if needed) [year of birth]-[year of death], [role of the person or entity using <a href="http://www.loc.gov/marc/relators/relaterm.html" target="_blank">MARC Relator terms</a>]</p>
+<p><strong>Local:</strong> [Last Name], [First Name], [Middle Initial]<br />(if applicable) [Suffix],(if needed) [year of birth]-[year of death], [role of the person or entity using <a href="http://www.loc.gov/marc/relators/relaterm.html" target="_blank">MARC Relator terms</a>]</p>
 <p>Separate multiple entries with a semicolon followed by a space.</p>
 <hr />
 <p style="text-align: center;"><em>EXAMPLES</em></p>
@@ -173,6 +173,7 @@
 <li>Doe, Jane A.</li>
 <li>Doe, J. A. (Jane Apple)</li>
 <li>Doe, Jane A., 1882-1982</li>
+<li>Doe, John, Jr.</li>
 <li>Doe, Jane A., 1882-1982, illustrator</li>
 </ul>
 </td>
@@ -199,7 +200,7 @@
 <p>"The entity responsible for making the resource available. Examples of a Publisher include a person, an organization, or a service. Typically, the name of a Publisher should be used to indicate the entity." (<a href="http://purl.org/dc/elements/1.1/publisher" target="_blank">DCMI</a>)</p>
 </td>
 <td valign="top">
-<p>Separate multiple entries with a semicolon followed by a space.</p>
+<p> Separate multiple entries with a semicolon followed by a space.</p>
 <hr />
 <p style="text-align: center;"><em>EXAMPLES</em></p>
 <ul>
@@ -235,7 +236,7 @@
 <ol>
 <li><a href="http://www.getty.edu/research/tools/vocabularies/tgn/index.html" target="_blank">Getty Thesaurus of Geographic Names (TGN)</a></li>
 <li><a href="http://www.tshaonline.org/handbook/online" target="_blank">Handbook of Texas (HOT)</a></li>
-<li>&nbsp;&nbsp;Local</li>
+<li>Local</li>
 </ol>
 <p>Separate multiple entries with a semicolon followed by a space.</p>
 <hr />
@@ -269,19 +270,21 @@
 <p>"The date refers to the creation of the original resource before undergoing any conversion." (<a href="http://www.mwdl.org/docs/MWDL_DC_Profile_Version_2.0.pdf" target="_blank">MWDL</a>)</p>
 </td>
 <td valign="top">
-<p>Date (ISO) should be expressed in the appropriate ISO 8601 format:</p>
+<p>Date (ISO) should be expressed in the appropriate Extended Date/Time Format (EDTF) format:</p>
 <ul>
-<li><a href="http://www.w3.org/TR/NOTE-datetime" target="_blank">ISO 8601</a></li>
-<li><a href="http://www.ukoln.ac.uk/metadata/dcmi/date-dccd-odrf/" target="_blank">ISO 8601 Date Range</a></li>
-<li><a href="http://www.loc.gov/standards/datetime/pre-submission.html#uncertain" target="_blank">ISO 8601 Uncertain/Approximate Dates</a></li>
+<li><a href="http://www.loc.gov/standards/datetime/pre-submission.html" target="_blank">Extended Date/Time Format (EDTF) 1.0</a></li>
 </ul>
-<p>Avoid using abbreviations and Latin terms for dates.</p>
-<p>Avoid using [square brackets] for dates added by metadata creator because of the <a href="http://www.loc.gov/standards/datetime/pre-submission.html#oneofaset" target="_blank">"One of a Set"</a> functionality.</p>
-<p>Use "~" in place of "ca.", "circa", or "approximately." Place the symbol after date.</p>
+<p>Only enter valid EDTF dates. Use the <a href="http://digital2.library.unt.edu/edtf/">Extended Date Time Format Levels 0, 1 and 2 Validation Service</a> to verify the format.</p>
+<p>Use "~" in place of "approximately." Place the symbol after date.</p>
 <p>Use "?" to designate an unknown date. Place the symbol after the date.</p>
 <p>Use "/" to separate dates in a date range.</p>
 <p>Use "x" to replace questionable date that occured once during a time period (1920s, etc.)</p>
 <p>YYYY<br />YYYY-MM<br />YYYY-MM-DD<br />YYYY-MM-DD/YYYY-MM-DD [closed date range]<br />/YYYY [open date range, no beginning date known]<br />YYYY/ [open date range, no ending date known]</p>
+
+<p>To represent a decade range such as 1920s-1930s, use 1920~/1939~</p>
+
+<p>To represent a season, use 21 (Spring), 22 (Summer), 23 (Fall), 24 (Winter), and the year. For example 2016-21 is Spring 2016.</p>
+<p>See the <a href="http://www.loc.gov/standards/datetime/pre-submission.html">Extended Date/Time Format (EDTF) 1.0</a> document for more options and examples.</p>
 <hr />
 <p style="text-align: center;"><em>EXAMPLES</em></p>
 <ul>
@@ -481,17 +484,15 @@
 <p>The topic should be expressed as an authorized term from a controlled vocabulary, in order of preference:</p>
 <ol>
 <li><a href="http://id.loc.gov/authorities/subjects.html" target="_blank">Library of Congress Subject Headings (LCSH)</a></li>
-<li><a href="http://id.loc.gov/vocabulary/graphicMaterials.html" target="_blank">Thesaurus for Graphic Materials (TGM)</a></li>
-<li><a href="http://www.getty.edu/research/tools/vocabularies/aat/index.html" target="_blank">Art &amp; Architecture Thesaurus (AAT)</a></li>
-<li><a href="http://www.archivists.org/publications/epubs/thesaurus.asp" target="_blank">Thesaurus for use in College and University Archives (SAA)</a></li>
-<li>&nbsp;&nbsp;Local</li>
+
+<li>Local</li>
 </ol>
-<p><strong>Local:</strong> keywords</p>
+<p>Avoid using pre-coordinated subject headings (ex. Hip-hop culture--Texas--Houston). Split into separate topics and/or other appropriate metadata fields when possible. (ex. Subject.Topical: Hip-hop culture. Subject.Geographic: Houston, Texas). </p>
 <p>Separate multiple entries with a semicolon followed by a space.</p>
 <hr />
 <p style="text-align: center;"><em>EXAMPLES</em></p>
 <ul>
-<li>Hip-hop culture--Texas--Houston</li>
+<li>Architecture</li>
 <li>Sailors</li>
 </ul>
 </td>
@@ -1129,7 +1130,7 @@
 <p style="text-align: center;"><strong>Use and Reproduction</strong></p>
 </td>
 <td valign="top">
-<p>"Information about rights held in and over the resource. Typically a Rights element will contain a rights management statement for the resource, or reference a service providing such information. Rights information often encompasses Intellectual Property Rights (IPR), Copyright, and various Property Rights. If the rights element is absent, no assumptions can be made about the status of these and other rights with respect to the resource." (<a href="http://dublincore.org/documents/dces/" target="_blank">DCMI</a>)</p>
+<p>"Information about rights held in and over the resource. Typically a Rights element will contain a rights management statement for the resource, or reference a service providing such information. Rights information often encompasses Intellectual Property Rights (IPR), Copyright, and various Property Rights. If the rights element is absent, no assumptions can be made about the status of these and other rights with respect to the resource." (<a href="http://dublincore.org/documents/dces/" target="_blank">D...(line truncated)...
 </td>
 <td valign="top">
 <p>Standardized language from the local controlled vocabulary:</p>
